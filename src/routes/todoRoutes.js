@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var express_1 = require("express");
+var todoController_1 = require("../controllers/todoController");
+var router = (0, express_1.Router)();
+router.post("/addtodo", todoController_1.todoAddHandler);
+router.post("/checktodo", todoController_1.checkTodoHandler);
+router.post("/updatetodo", todoController_1.updateTodoTitleHandler);
+router.get("/sorttodo", todoController_1.sortTodoTitleHandler);
+router.post("/searchtodo", todoController_1.searchTodoTitleHandler);
+router.post("/deletealltodo", todoController_1.deleteAllTodoTitleHandler);
+exports.default = router;
