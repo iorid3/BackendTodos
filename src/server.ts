@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 const cors = require('cors')
 app.use(cors({
-  origin: "https://todosback.onrender.com/",
+  origin: "https://front-todos-5bcjx6nlv-iorid3.vercel.app/",
   optionsSuccessStatus: 200
 }));
 
