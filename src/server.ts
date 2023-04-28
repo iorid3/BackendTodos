@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 const cors = require('cors')
 app.use(cors({
-  origin: "http://localhost:3001",
+  origin: "https://todosback.onrender.com/",
   optionsSuccessStatus: 200
 }));
 
