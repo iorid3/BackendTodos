@@ -3,7 +3,6 @@ const app: express.Express = express();
 import todoRoutes from "./routes/todoRoutes";
 
 
-
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -12,7 +11,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 const cors = require('cors')
 app.use(cors({
   origin: "https://front-todos-5bcjx6nlv-iorid3.vercel.app/",
-  optionsSuccessStatus: 200
 }));
 
 app.listen(3000, () => {
