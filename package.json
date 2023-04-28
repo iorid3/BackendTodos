@@ -2,10 +2,10 @@
   "name": "myapp",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/server.js",
+  "main": "src/server.ts",
   "scripts": {
     "test": "jest",
-    "start": "node dist/server.js",
+    "start": "node src/server.ts",
     "build": "tsc"
   },
   "keywords": [],
