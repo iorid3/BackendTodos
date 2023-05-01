@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 const cors = require('cors')
 app.use(cors({
-  origin: "https://front-todos.vercel.app/",
+  origin: "https://front-todos.vercel.app",
 }));
 
 app.listen(3000, () => {
