@@ -23,11 +23,12 @@ export class todoServices {
 
   static async checkTodo(req: Request): Promise<Todo[]> {
     const { id, completion} = req.body;
+    const now = new Date().toISOString();
     console.log(req.body)
     try {
       const { data, error } = await supabase
         .from("todos")
-        .update({ completion: !completion, updated_at:""})
+        .update({ completion: !completion, updated_at:now})
         .eq("id", id)
         .select();
       if (error) {
