@@ -27,7 +27,7 @@ export class todoServices {
     try {
       const { data, error } = await supabase
         .from("todos")
-        .update({ completion: !completion })
+        .update({ completion: !completion, updated_at:""})
         .eq("id", id)
         .select();
       if (error) {
@@ -120,6 +120,6 @@ export class todoServices {
     } catch (error) {
       console.log(error);
       throw new Error(`Unable to sort todos: ${error}`);
-    }
+    } 
   }
 }
