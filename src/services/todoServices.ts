@@ -115,6 +115,7 @@ export class todoServices {
           id: todo.id,
           title: todo.title,
           completion: todo.completion,
+          updated_date:todo.updated_at
         }))
         .sort((a, b) => a.title.localeCompare(b.title, undefined));
       return sortedTodos;
